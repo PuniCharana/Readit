@@ -120,4 +120,12 @@
     <string name="settings_default_option">Default option.</string>
     <string name="ad_id" translatable="false">ca-app-pub-4780531239663542/7099950076</string>
     <string name="no_subscription">You have not subscribed to any subreddit yet</string>
+    <string name="comments_loaded">Comments loaded</string>
+    <string name="no_comments_found">No comment found</string>
+    <string name="sorted_ascending">Sorted as ascending</string>
+    <string name="sorted_descending">Sorted descending</string>
+    <string name="added_to_widget">Added to home widget</string>
+    <string name="nothing_to_add_to_widget">Nothing to add to widget!</string>
+    <string name="already_added">Already added</string>
+    <string name="failed_to_load_data">Failed to load data</string>
 </resources>

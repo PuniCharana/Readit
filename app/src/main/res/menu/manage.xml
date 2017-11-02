@@ -30,12 +30,6 @@
     </item>
 
     <item
-        android:id="@+id/action_help"
-        android:orderInCategory="102"
-        android:title="@string/action_help"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/action_settings"
         android:orderInCategory="103"
         android:title="@string/action_settings"

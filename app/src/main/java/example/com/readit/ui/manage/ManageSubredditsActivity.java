@@ -20,7 +20,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.gson.Gson;
@@ -72,7 +71,7 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
                 linearLayoutManager.getOrientation());
         mRecyclerView.addItemDecoration(dividerItemDecoration);
 
-        subredditsPresenter.loadData(getSupportLoaderManager());
+        subredditsPresenter.loadData();
     }
 
     @Override
@@ -92,7 +91,7 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
 
     @Override
     public void onDataLoadError(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        showSnackBar(message);
     }
 
     @Override
@@ -101,13 +100,8 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
     }
 
     @Override
-    public void onHelpOptionClick() {
-        Toast.makeText(this, "Help", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
     public void onDescendingOptionClick() {
-        Toast.makeText(this, "Sorted descending", Toast.LENGTH_SHORT).show();
+        showSnackBar(getString(R.string.sorted_descending));
 
         Collections.sort(localSubreddits, new Comparator<LocalSubreddit>() {
             @Override
@@ -133,7 +127,7 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
         onDataLoaded(localSubreddits);
 
         updateToDB();
-        Toast.makeText(this, "Sorted as ascending", Toast.LENGTH_SHORT).show();
+        showSnackBar(getString(R.string.sorted_ascending));
     }
 
     private void updateToDB(){
@@ -178,7 +172,7 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
 
             updateAllWidgets();
 
-            showSnackBar("Added to home widget");
+            showSnackBar(getString(R.string.added_to_widget));
 
             String android_id = Settings.Secure.getString(getContentResolver(),
                     Settings.Secure.ANDROID_ID);
@@ -191,8 +185,13 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
             mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
             
         } else {
-            showSnackBar("Nothing to add to widget!");
+            showSnackBar(getString(R.string.nothing_to_add_to_widget));
         }
+    }
+
+    @Override
+    public void onItemRemoved(String message) {
+        showSnackBar(message);
     }
 
     private void updateAllWidgets() {
@@ -214,7 +213,7 @@ public class ManageSubredditsActivity extends AppCompatActivity implements Manag
         return subredditsPresenter.onOptionItemSelected(item);
     }
     
-    private void showSnackBar(String message){
+    public void showSnackBar(String message){
         Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG).show();
     }
 }

@@ -108,7 +108,6 @@ public class SubredditsListPresenter implements SubredditsListContract.Subreddit
         // Insert the content values via a ContentResolver
         Uri uri = context.getContentResolver().insert(SubredditContract.SubredditEntry.CONTENT_URI, contentValues);
 
-        // Display the URI that's returned with a Toast
         if (uri != null) {
             Log.d("DATA", uri.getLastPathSegment());
 

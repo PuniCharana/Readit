@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -19,7 +20,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -76,7 +76,7 @@ public class ViewSubredditActivity extends AppCompatActivity implements ViewSubr
 
         if (getSupportActionBar()!=null) {
             setSupportActionBar(mToolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayUseLogoEnabled(true);
         }
         viewSubredditPresenter = new ViewSubredditPresenter(this);
 
@@ -198,14 +198,12 @@ public class ViewSubredditActivity extends AppCompatActivity implements ViewSubr
         // Insert the content values via a ContentResolver
         Uri uri = getContentResolver().insert(SubredditContract.SubredditEntry.CONTENT_URI, contentValues);
 
-        // Display the URI that's returned with a Toast
         if (uri != null) {
             Log.d("DATA", uri.getLastPathSegment());
 
             if (Integer.parseInt(uri.getLastPathSegment()) > 0) {
                 Log.d("DATA", "Success");
-                Toast.makeText(this, subreddit.getDisplay_name(), Toast.LENGTH_SHORT).show();
-
+                showSnackBar(subreddit.getDisplay_name());
                 // Firebase Analytics subscribe
                 FirebaseAnalytics mFirebaseAnalytics = FirebaseAnalytics.getInstance(getApplicationContext());
                 Bundle bundle = new Bundle();
@@ -215,9 +213,13 @@ public class ViewSubredditActivity extends AppCompatActivity implements ViewSubr
                 mFirebaseAnalytics.logEvent("subscribe", bundle);
             } else {
                 Log.d("DATA", "failed");
-                Toast.makeText(this, "Already added", Toast.LENGTH_SHORT).show();
+                showSnackBar(getString(R.string.already_added));
             }
         }
+    }
+
+    private void showSnackBar(String message) {
+        Snackbar.make(findViewById(android.R.id.content) ,message, Snackbar.LENGTH_LONG).show();
     }
 
 

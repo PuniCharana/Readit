@@ -19,7 +19,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -244,12 +243,12 @@ public class PostDetailFragment extends Fragment implements PostDetailFragmentCo
         progressBar.setVisibility(View.GONE);
 
         if (postCommentArrayList.size() > 0) {
-            Snackbar.make(rootView, "Comments loaded", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(rootView, R.string.comments_loaded, Snackbar.LENGTH_LONG).show();
 
             postComments.addAll(postCommentArrayList);
             postCommentAdapter.notifyDataSetChanged();
         } else {
-            Toast.makeText(getContext(), "No comment found", Toast.LENGTH_SHORT).show();
+            showSnackBar(getString(R.string.no_comments_found));
         }
     }
 
@@ -260,7 +259,7 @@ public class PostDetailFragment extends Fragment implements PostDetailFragmentCo
 
     @Override
     public void onDataLoadError(String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+        showSnackBar(message);
     }
 
     @Override
