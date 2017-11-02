@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/subreddit_title"
+        android:layout_width="0dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textDirection="locale"
+        tools:text="Subreddit Name" />
+
+
+    <ImageView
+        android:id="@+id/delete"
+        app:srcCompat="@drawable/ic_clear"
+        android:contentDescription="@string/content_description_delete"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

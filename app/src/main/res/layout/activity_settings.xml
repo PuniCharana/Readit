@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    tools:context=".ui.settings.SettingsActivity">
+
+    <TextView
+        android:id="@+id/filter_label_title"
+        android:nextFocusForward="@+id/default_option"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_small"
+        android:text="@string/filter_subreddit_by" />
+    <TextView
+        android:nextFocusForward="@+id/filter_option"
+        android:id="@+id/default_option"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_medium"
+        android:text="@string/settings_default_option" />
+
+    <RadioGroup
+        android:nextFocusForward="@+id/filter_option_hot"
+        android:id="@+id/filter_option"
+        android:checkedButton="@id/filter_option_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:nextFocusForward="@+id/filter_option_top"
+            android:id="@+id/filter_option_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_settings_hot" />
+
+        <RadioButton
+            android:nextFocusForward="@+id/filter_option_new"
+            android:id="@+id/filter_option_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_settings_top" />
+
+        <RadioButton
+            android:nextFocusForward="@+id/filter_option_rising"
+            android:id="@+id/filter_option_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_settings_new" />
+
+        <RadioButton
+            android:nextFocusForward="@+id/filter_option_controversial"
+            android:id="@+id/filter_option_rising"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_settings_rising" />
+
+        <RadioButton
+            android:nextFocusForward="@+id/filter_option_hot"
+            android:id="@+id/filter_option_controversial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_settings_controversial" />
+
+    </RadioGroup>
+</LinearLayout>

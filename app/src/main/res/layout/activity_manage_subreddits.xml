@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layoutDirection="inherit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.com.readit.ui.manage.ManageSubredditsActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/local_subreddit_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/no_subscription"
+        android:layout_gravity="center"
+        android:text="@string/no_subscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

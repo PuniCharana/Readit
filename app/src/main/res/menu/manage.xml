@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add_to_widget"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_widgets"
+        android:title="@string/action_help"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_filter"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_ascending"
+                android:orderInCategory="200"
+                app:showAsAction="ifRoom"
+                android:title="@string/action_ascending"/>
+            <item
+                android:id="@+id/action_descending"
+                android:orderInCategory="201"
+                app:showAsAction="ifRoom"
+                android:title="@string/action_descending"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="102"
+        android:title="@string/action_help"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="103"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

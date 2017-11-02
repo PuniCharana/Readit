@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_small">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_small"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/subreddit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:text="/r/aww/" />
+
+        <TextView
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:id="@+id/subreddit_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Subreddit description" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/subreddit_subscriber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="10k subscribers," />
+
+            <TextView
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:id="@+id/subreddit_created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="community for 10 years"
+                android:layout_marginStart="@dimen/margin_small" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/subreddit_subscribe_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:padding="3dp"
+        android:text="@string/button_subscribe"
+        android:textAllCaps="false"
+        android:clickable="true"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:focusable="true"
+        android:background="@drawable/rounded_corner_button"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Readit</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_help">Help</string>
+    <string name="action_descending">Descending</string>
+    <string name="action_ascending">Ascending</string>
+    <string name="action_view_detail">View Detail</string>
+    <string name="content_description_share">Share Button</string>
+    <string name="content_description_subscribe">Subscribe Button</string>
+    <string name="content_description_header_image">Header Image</string>
+    <string name="content_description_post_image">Post Image</string>
+    <string name="content_description_favorite_post">Favorite post?</string>
+    <string name="content_description_post_thumbnail">Post Thumbnail</string>
+    <string name="content_description_post_vote_down">Post vote down</string>
+    <string name="content_description_post_vote_up">Post vote up</string>
+    <string name="placeholder_date_author">%1$s by %2$s</string>
+    <string name="placeholder_points_comments">%1$s pts %2$s comments</string>
+    <string name="placeholder_subreddit_title">/r/%s</string>
+    <string name="placeholder_comments_meta"><b>%s</b>, %d pts, %s</string>
+    <string name="hint_password">password</string>
+    <string name="login_button_text">Login</string>
+    <string name="hint_username">username</string>
+    <string name="error_password">Password cannot be empty</string>
+    <string name="error_user_name">Username cannot be empty</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_all">All</string>
+    <string name="nav_popular">Popular</string>
+    <string name="nav_random">Random</string>
+    <string name="nav_subreddit_picks">Reddit Picks</string>
+    <string name="nav_manage">Manage</string>
+    <string name="nav_subreddits">Subreddits</string>
+    <string name="nav_title_subscription">Subscription</string>
+    <string name="title_activity_view_subreddit">ViewSubredditActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_subreddits">Subreddits</string>
+    <string name="content_description_delete">Delete</string>
+    <string name="button_subscribe">subscribe</string>
+    <string name="capstone_project_2">Capstone Project 2</string>
+    <string name="udacity">Udacity</string>
+    <string name="app_logo">App logo</string>
+    <string name="action_share">Share via</string>
+
+    <string-array name="reddit_picks">
+        <item>/r/announcements</item>
+        <item>/r/Art</item>
+        <item>/r/AskReddit</item>
+        <item>/r/askscience</item>
+        <item>/r/aww</item>
+        <item>/r/blog</item>
+        <item>/r/books</item>
+        <item>/r/creepy</item>
+        <item>/r/dataisbeautiful</item>
+        <item>/r/DIY</item>
+        <item>/r/Documentaries</item>
+        <item>/r/explainlikeimfive</item>
+        <item>/r/food</item>
+        <item>/r/funny</item>
+        <item>/r/Futurology</item>
+        <item>/r/gadgets</item>
+        <item>/r/gaming</item>
+        <item>/r/GetMotivated</item>
+        <item>/r/gifs</item>
+        <item>/r/history</item>
+        <item>/r/IAmA</item>
+        <item>/r/InternetIsBeautiful</item>
+        <item>/r/Jokes</item>
+        <item>/r/LifeProTips</item>
+        <item>/r/listentothis</item>
+        <item>/r/mildlyinteresting</item>
+        <item>/r/movies</item>
+        <item>/r/Music</item>
+        <item>/r/news</item>
+        <item>/r/nosleep</item>
+        <item>/r/nottheonion</item>
+        <item>/r/OldSchoolCool</item>
+        <item>/r/personalfinance</item>
+        <item>/r/philosophy</item>
+        <item>/r/photoshopbattles</item>
+        <item>/r/pics</item>
+        <item>/r/science</item>
+        <item>/r/Showerthoughts</item>
+        <item>/r/space</item>
+        <item>/r/sports</item>
+        <item>/r/television</item>
+        <item>/r/tifu</item>
+        <item>/r/todayilearned</item>
+        <item>/r/TwoXChromosomes</item>
+        <item>/r/UpliftingNews</item>
+        <item>/r/videos</item>
+        <item>/r/worldnews</item>
+        <item>/r/WritingPrompts</item>
+    </string-array>
+    <string-array name="subreddit_filter_options">
+        <item>Hot</item>
+        <item>Top</item>
+        <item>New</item>
+        <item>Rising</item>
+        <item>Controversial</item>
+    </string-array>
+    <string-array name="subreddits_filter_options">
+        <item>Popular</item>
+        <item>New</item>
+    </string-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="label_widget_title">Widget Title</string>
+    <string name="widget_title">Subscribed subreddits</string>
+    <string name="error_no_internet_connection">No internet connection</string>
+    <string name="error_failed_to_load_data">Failed to load data!</string>
+    <string name="filter_settings_hot">Hot</string>
+    <string name="filter_settings_top">Top</string>
+    <string name="filter_settings_new">New</string>
+    <string name="filter_settings_rising">Rising</string>
+    <string name="filter_settings_controversial">Controversial</string>
+    <string name="filter_subreddit_by">Filter subreddit by :</string>
+    <string name="settings_default_option">Default option.</string>
+    <string name="ad_id" translatable="false">ca-app-pub-4780531239663542/7099950076</string>
+    <string name="no_subscription">You have not subscribed to any subreddit yet</string>
+</resources>

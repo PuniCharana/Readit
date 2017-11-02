@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_all"
+            android:icon="@drawable/ic_pets"
+            android:title="@string/nav_all" />
+
+        <item
+            android:id="@+id/nav_popular"
+            android:icon="@drawable/ic_trending_up"
+            android:title="@string/nav_popular" />
+
+        <item
+            android:id="@+id/nav_random"
+            android:icon="@drawable/ic_shuffle"
+            android:title="@string/nav_random" />
+
+        <item
+            android:id="@+id/nav_subreddits"
+            android:icon="@drawable/ic_label"
+            android:title="@string/nav_subreddits" />
+
+        <item
+            android:id="@+id/nav_reddit_picks"
+            android:icon="@drawable/ic_star_border"
+            android:title="@string/nav_subreddit_picks" />
+
+    </group>
+
+    <item android:title="@string/nav_title_subscription">
+        <menu>
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_manage"
+                android:title="@string/nav_manage" />
+        </menu>
+    </item>
+</menu>
